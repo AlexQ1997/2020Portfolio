@@ -17,7 +17,8 @@ const callDistort = function () {
 
 callDistort();
 
-const nav = document.getElementById("navBar");
+
+const nav = document.getElementById("header").childNodes;
 const aTags = document.getElementsByTagName("a");
 
 for (var i = 0; i <aTags.length; i++) {
