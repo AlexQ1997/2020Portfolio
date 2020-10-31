@@ -4,45 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel|PT+Sans:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav id="navBar">
-            <a href="home.html">Home.</a>
-            <a href="#">About.</a>
-            <a href="#">Contact.</a>
-            <a href="#">Projects.</a>
-            <a class=" active" href="index.html">Photography.</a>
-        </nav>
-    </header>
-   
-    
-    <div class="title">
-        <h1>Photography</h1>
-    </div>
-  
+    <body>
 
-    <div class="content">
-        <section class="images">
-            <div>
-                <img src="images/port1.jpg" alt="">
+        <!-- Landing Page -->
+        <section class="landing-screen">
+            <div class="name">
+                <h1 data-text="Alejandro Quintanilla">Alejandro Quintanilla</h1>
+                <p class="line anim-typewriter">Photography / <span>Web Design</span></p>
             </div>
-            <div>
-                <img src="images/port2.jpg" alt="">
-            </div>
-            <div>
-                <img src="images/port3.jpg" alt="">
-            </div>
-            <div>
-                <img src="images/port4.jpg" alt="">
-            </div>
-            <div>
-                <img src="images/port5.jpg" alt="">
+
+            <img  class="cool-link" src="images/arrow-down.svg" alt="">
+            <!-- <a class="cool-link" href="index.html">Enter</a>   -->
+        </section>
+        
+        <!-- About -->
+        <section class="about">
+            <div class="description">
+                <p>Hello, my name is alejandro. I am a self taught photographer and web designer. </p>
+
+               
             </div>
         </section>
-    </div>
-    <script src="main.js"></script>
+
+        <!-- Captures  -->
+        <section class="captures">
+            <div class="content">
+                <img src="images/arrow-down-circle.svg" alt="">
+                <div class="text">
+                    <h2>Captures</h2>
+                    <p>All images captured by me </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Photography -->
+
+        <section class="photography">
+            <div class="row">
+                <img src="images/port1.jpg" alt="">
+            </div>
+            <div class="row">
+                <img src="images/port2.jpg" alt="">
+            </div>
+            <div class="row">
+                <img src="images/port3.jpg" alt="">
+            </div>
+            <div class="row">
+                <img src="images/port4.jpg" alt="">
+            </div>
+        </section>
+
+        <!-- Get in Touch -->
+        <section>
+            
+        </section>
+
+   
+    
+        <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
+        <script src="script.js"></script>
+    </body>
+   
 </body>
 </html>

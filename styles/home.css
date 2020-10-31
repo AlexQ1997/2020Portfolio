@@ -1,4 +1,10 @@
+html,
 body {
+  padding: 0;
+  margin: 0;
+}
+
+.landing-screen {
   width: 100%;
   height: 100vh;
   background-color: #000;
@@ -16,9 +22,11 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
+  padding: 0;
 }
 
-body .name {
+.landing-screen .name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,7 +44,7 @@ body .name {
   display: inline-block;
 }
 
-body .name h1 {
+.landing-screen .name h1 {
   color: #fff;
   font-family: "Cinzel", serif;
   font-size: 96px;
@@ -47,13 +55,13 @@ body .name h1 {
   margin: 0;
 }
 
-body .name p span {
+.landing-screen .name p span {
   font-family: "Raleway", sans-serif;
-  color: #00CE78;
+  color: #690AFF;
   font-weight: 400;
 }
 
-body .name .line {
+.landing-screen .name .line {
   position: absolute;
   top: 110%;
   left: 51%;
@@ -72,7 +80,7 @@ body .name .line {
   letter-spacing: 5px;
 }
 
-body .name .anim-typewriter {
+.landing-screen .name .anim-typewriter {
   -webkit-animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
           animation: typewriter 4s steps(40) 1s 1 normal both, blinkTextCursor 500ms steps(40) infinite normal;
 }
@@ -113,7 +121,7 @@ body .name .anim-typewriter {
   }
 }
 
-body .name h1::before, body .name h1::after {
+.landing-screen .name h1::before, .landing-screen .name h1::after {
   content: attr(data-text);
   position: absolute;
   top: 0;
@@ -123,13 +131,13 @@ body .name h1::before, body .name h1::after {
   z-index: -1;
 }
 
-body .name h1::before {
+.landing-screen .name h1::before {
   color: #ff00c1;
   -webkit-animation: glitch-effect 3s infinite;
           animation: glitch-effect 3s infinite;
 }
 
-body .name h1::after {
+.landing-screen .name h1::after {
   color: #3498db;
   -webkit-animation: glitch-effect 4s infinite;
           animation: glitch-effect 4s infinite;
@@ -181,9 +189,9 @@ body .name h1::after {
   }
 }
 
-body a {
+.landing-screen img {
   position: relative;
-  top: 30%;
+  top: 40%;
   cursor: pointer;
   color: #ffffff;
   font-size: 24px;
@@ -191,7 +199,7 @@ body a {
   font-family: "Raleway", sans-serif;
 }
 
-body .cool-link::after {
+.landing-screen .cool-link::after {
   content: '';
   display: block;
   width: 0;
@@ -201,7 +209,7 @@ body .cool-link::after {
   transition: width .3s;
 }
 
-body .cool-link:hover::after {
+.landing-screen .cool-link:hover::after {
   width: 100%;
   -webkit-transition: width .3s;
   transition: width .3s;
@@ -232,65 +240,82 @@ body .cool-link:hover::after {
   }
 }
 
-.btn-flip {
-  opacity: 1;
-  outline: 0;
-  color: #fff;
-  line-height: 40px;
-  position: relative;
-  text-align: center;
-  letter-spacing: 1px;
-  display: inline-block;
-  text-decoration: none;
-  font-family: "PT Sans", sans-serif;
-  text-transform: uppercase;
-}
-
-.btn-flip:hover:after {
-  opacity: 1;
-  -webkit-transform: translateY(0) rotateX(0);
-          transform: translateY(0) rotateX(0);
-}
-
-.btn-flip:hover:before {
-  opacity: 0;
-  -webkit-transform: translateY(50%) rotateX(90deg);
-          transform: translateY(50%) rotateX(90deg);
-}
-
-.btn-flip:after {
-  top: 0;
-  left: 0;
-  opacity: 0;
+.about {
   width: 100%;
-  color: #fff;
-  display: block;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: absolute;
-  background: #000;
-  content: attr(data-back);
-  -webkit-transform: translateY(-50%) rotateX(30deg);
-          transform: translateY(-50%) rotateX(30deg);
-  margin-top: 50px;
-  padding: 10px 0;
+  background-color: #0000;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.btn-flip:before {
-  top: 0;
-  left: 0;
-  opacity: 1;
+.about .description {
+  color: #fff;
+  text-align: left;
+}
+
+.about .description p {
+  font-family: "Cinzel", serif;
+  font-size: 144px;
+  margin-left: 4rem;
   color: #000;
-  display: block;
-  padding: 10px 50px;
-  line-height: 40px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  position: relative;
-  background: #00CE78;
-  content: attr(data-front);
-  -webkit-transform: translateY(0) rotateX(0);
-          transform: translateY(0) rotateX(0);
-  margin-top: 50px;
+}
+
+.captures {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: #0f0f0f;
+}
+
+.captures .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0 250px 0 250px;
+}
+
+.captures .content img {
+  color: #fff;
+}
+
+.captures .content .text h2 {
+  padding: 0;
+  margin: 0;
+  color: #fff;
+  font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 96px;
+  text-align: center;
+}
+
+.captures .content .text p {
+  color: #fff;
+  font-family: "Raleway", sans-serif;
+  margin-left: 5px;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.photography {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.photography .row {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+  max-width: 50%;
+}
+
+.photography .row img {
+  vertical-align: middle;
+  width: 100%;
 }
 /*# sourceMappingURL=home.css.map */
