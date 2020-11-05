@@ -16,7 +16,7 @@
         <!-- Landing Page -->
         <section class="landing-screen">
             <div class="name">
-                <h1 data-text="Alejandro Quintanilla">Alejandro Quintanilla</h1>
+                <h1 data-text="Alejandro">Alejandro</h1>
                 <p class="line anim-typewriter">Photography / <span>Web Design</span></p>
             </div>
 
@@ -48,25 +48,47 @@
 
         <section class="photography">
             <div class="row">
-                <img src="images/port1.jpg" alt="">
+                <div class="images image1"></div>
+                <!-- <img src="images/port1.jpg" alt=""> -->
             </div>
             <div class="row">
-                <img src="images/port2.jpg" alt="">
+                <div class="images image2"></div>
+                <!-- <img src="images/port2.jpg" alt=""> -->
             </div>
             <div class="row">
-                <img src="images/port3.jpg" alt="">
+                <div class="images image3"></div>
+                <!-- <img src="images/port3.jpg" alt=""> -->
             </div>
             <div class="row">
-                <img src="images/port4.jpg" alt="">
+                <div class="images image4"></div>
+                <!-- <img src="images/port4.jpg" alt=""> -->
             </div>
         </section>
 
         <!-- Get in Touch -->
-        <section>
-            
-        </section>
-
+        <section class="form">
+            <div class="box-1">
+               <h1 data-text="Touch">Get In Touch.</h1>
    
+                <p>I am looking forward to hearing from with you!</p>
+            </div>
+   
+            <div class="box-2">
+                <div id="error"></div>
+               <form id="form" action="mailto:alex.quintanilla2015@gmail.com"  method="post" enctype="text/plain">
+                   <h2>*First Name</h2>
+                   <input type="text" class="name" id="firstName"><br>
+                   <h2>*Last Name</h2>
+                   <input type="text" class="name" id="lastName"><br>
+                   <h2>*Email</h2>
+                   <input type="email"  class="email" id="email"><br>
+                   <h2>*Comments</h2>
+                   <textarea name="name"  class="message" rows="1"></textarea>
+                   <button class="myButton" type="submit" name="button" value="send">Submit</button>
+                 </form>
+                
+            </div>
+        </section>
     
         <script src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>  
         <script src="script.js"></script>
