@@ -1,75 +1,64 @@
+:root {
+    --main-color: #FFFAFA;
+    --secondary-color: #00CE3A;
+    --primary-font: 'Michroma', sans-serif;
+    --secondary-font: 'Raleway', sans-serif;
+}
+
+
 html, body {
     margin: 0;
     padding: 0;
-    width: 100%;
-    background: #161616;
 }
 
 body {
-    margin: 500px auto;
+    background: url(/images/grainTexture.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
 }
 
-/* Navigation */
-
-header {
-    display: flex;
-    justify-content: space-around;
-    top: 0;
-    align-content: center;
+.container {
+    margin: 0 10rem 0 10rem;
 }
 
-nav {
-    position: absolute;
-    top: 0;
-    padding: 50px;
-  
-}
-nav a {
-    text-align: center;
-    text-decoration: none;
-    color: #fff;
-    font-family: 'Cinzel', serif;
-    font-weight: 400;
-    margin-right: 50px;
-    font-size: 24px;
+.landing-screen {
+    width: 100%;
+    display: flex; 
 }
 
-.active, a:hover {
-    color: #00CE78;
-    font-weight: 500;
-  }
-
-/* Title */
-
-h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 10vw;
-    font-weight: 400;
-    text-align: center;
-    color: #fff;
-    position: absolute;
-    z-index: 1;
-    top: 40%;
+.landing-screen .text h1{
+    font-size: 180px;
+    margin: 0;
+    font-family: var(--secondary-font);
+    font-weight: 600;
+    color: var(--secondary-color);
 }
 
-.content {
-    width: 70%;
-    margin: 160px auto;
-}
-
-section {
-    transition: transform 0.25s;
-    will-change: transform;
-}
-
-img {
-    width: 50%;
-    height: 50%;
-}
-
-div {
+.landing-screen .name {
     margin-bottom: 5rem;
-    display: flex;
-    justify-content: center;
 }
 
+.landing-screen .name p {
+    font-size: 36px;
+    font-family: var(--primary-font);
+    color: var(--main-color);
+    margin: 0;
+}
+
+footer p {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    color: var(--secondary-color);
+    
+}
+
+footer nav a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-family: var(--primary-font);
+    margin-right: 3rem;
+    margin-top: 0;
+    padding: 0;
+}
