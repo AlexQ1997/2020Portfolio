@@ -6,39 +6,40 @@
 }
 
 
-html, body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    cursor: url(/images/cursor.png), auto !important;
+.home {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
 }
 
-body {
-    background: url(/images/grainTexture.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
+.home a {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--main-color);
+    text-decoration: none;
+    transition: ease-in-out 1s;
 }
 
-.container {
-    margin: 0 0 0 10rem;
+.home a:hover {
+    color: var(--secondary-color);
+    font-size: 2rem;
 }
 
-/* Naviagtion */
-.menu {
+/* Navigation */
+.projects {
     width: 100%;
     position: absolute;
-    left: 150%;
-    top: 15%;
+    top: 10%; 
+    margin-left: 10rem;
 }
 
-.menu ul li {
+.projects .projectsList li {
     list-style: none;
     margin-bottom: 50px;
 }
 
-.menu ul li a {
+.projects .projectsList li a  {
     text-decoration: none;
     font-size: 96px;
     font-family: var(--secondary-font);
@@ -48,7 +49,7 @@ body {
     -webkit-text-stroke-color: #fff;
 }
 
-.menu ul li a {
+.projects .projectsList li a {
         position: relative;
         display: inline-block;
         color: transparent;
@@ -63,45 +64,10 @@ body {
         text-decoration: none; 
 }
 
-.menu ul li a:hover {
-        background-position: 0 100%;
-        -webkit-text-stroke-width: 0;
-        transition: ease-in-out 0.5s;
-      font-size: 8rem;
-}
-/* Landing Page */
 
-.landing-screen {
-    display: flex; 
-    position: absolute;
-    top: 15%;
-}
+  /* ---------- Footer -------- */
 
-/* Heading text */
-.landing-screen .text h1{
-    font-size: 180px;
-    margin: 0;
-    font-family: var(--secondary-font);
-    font-weight: 600;
-    color: var(--secondary-color);
-}
-
-.landing-screen .name {
-    margin-bottom: 5rem;
-}
-
-    /*-------- Secondary text -----*/
-
-.landing-screen .name p {
-    font-size: 36px;
-    font-family: var(--primary-font);
-    color: var(--main-color);
-    margin: 0;
-}
-
-    /* ---------- Footer -------- */
-
-footer {
+  footer {
     position: absolute;
     bottom: 5%;
 }
@@ -124,6 +90,3 @@ footer nav a {
 footer nav a:hover {
     font-size: 2rem;
 }
-
-
-
