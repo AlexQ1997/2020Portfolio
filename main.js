@@ -33,6 +33,8 @@
 // const img2 = document.querySelector(".img-2");
 // const img3 = document.querySelector(".img-3");
 // const img4 = document.querySelector(".img-4");
+// const container = document.querySelector(".imgContainer");
+// const images = document.querySelector(".images");
 
 // document.addEventListener("mousemove", e => {
 //     img1.setAttribute(
@@ -56,9 +58,36 @@
     
 // } );
 
-// // Gsap Animations
-// gsap.from('.description', {opacity: 0, duration: 2.5, x: -50, ease: "power1.out" })
-// gsap.from('.name, a', {opacity: 0, duration: 1.5, y: -50, ease: "power1.out" })
+// Navigation 
+function show() {
+    document.getElementsById('sidebar').classList.toggle('active');
+}
 
-// // Animate on Scroll
-// AOS.init();
+
+// Gsap Animations
+gsap.from('.title', {
+    opacity: 0, 
+    duration: 2.5, 
+    x: -50, ease: 
+    "power1.out" })
+
+gsap.from('.name ', {
+    opacity: 0, 
+    duration: 2.5, 
+    y: -50, 
+    delay:1.4, 
+    ease: "power1.out" })
+
+gsap.from('footer, nav', {
+    opacity: 0, 
+    duration: 2, 
+    y: 50, 
+    delay:1.8, 
+    ease: "power1.out" })
+
+    gsap.from('.navigation', {
+        opacity: 0, 
+        duration: 2, 
+        x: 50, 
+        delay: 3.5, 
+        ease: "power1.out" })

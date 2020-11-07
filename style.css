@@ -1,6 +1,6 @@
 :root {
     --main-color: #FFFAFA;
-    --secondary-color: #00CE3A;
+    --secondary-color: #00CE3A ;
     --primary-font: 'Michroma', sans-serif;
     --secondary-font: 'Raleway', sans-serif;
 }
@@ -9,6 +9,9 @@
 html, body {
     margin: 0;
     padding: 0;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    cursor: url(/images/cursor.png), auto !important;
 }
 
 body {
@@ -20,14 +23,63 @@ body {
 }
 
 .container {
-    margin: 0 10rem 0 10rem;
+    margin: 0 0 0 10rem;
 }
+
+/* Naviagtion */
+.menu {
+    width: 100%;
+    position: absolute;
+    left: 150%;
+    top: 15%;
+}
+
+.menu ul li {
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 96px;
+    font-family: var(--secondary-font);
+    color: transparent;
+    font-weight: 800;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #fff;
+}
+
+.menu ul li a {
+        position: relative;
+        display: inline-block;
+        color: transparent;
+        overflow: hidden;
+        background: linear-gradient(to right, #00CE3A 50%, transparent 50%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 200% 100%;
+        background-position: 100%;
+        transition: background-position 275ms ease;
+        text-decoration: none; 
+        
+}
+
+.menu ul li a:hover {
+        background-position: 0 100%;
+        -webkit-text-stroke-width: 0;
+        transition: ease-in-out 0.5s;
+      font-size: 8rem;
+}
+/* Landing Page */
 
 .landing-screen {
-    width: 100%;
     display: flex; 
+    position: absolute;
+    top: 15%;
 }
 
+/* Heading text */
 .landing-screen .text h1{
     font-size: 180px;
     margin: 0;
@@ -40,11 +92,20 @@ body {
     margin-bottom: 5rem;
 }
 
+/* Secondary text */
+
 .landing-screen .name p {
     font-size: 36px;
     font-family: var(--primary-font);
     color: var(--main-color);
     margin: 0;
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 5%;
 }
 
 footer p {
@@ -61,4 +122,47 @@ footer nav a {
     margin-right: 3rem;
     margin-top: 0;
     padding: 0;
+    cursor: url(/images/cursor.png), auto !important;
+}
+
+footer nav a:hover {
+    transform: scale(20px);
+}
+
+/* images */
+
+.imgContainer {
+    width: 800px;
+}
+
+.img {
+    position: absolute;
+    width: 300px;
+    height: 500px;
+    transition-timing-function: ease-out;
+    z-index: -10;
+}
+
+.img-1 {
+    background: url("/images/port1.jpg");
+    background-size: cover;
+    transition-duration: 800ms;
+}
+
+.img-2 {
+    background: url("/images/port2.jpg");
+    background-size: cover;
+    transition-duration: 600ms;
+}
+
+.img-3 {
+    background: url("/images/port3.jpg");
+    background-size: cover;
+    transition-duration: 400ms;
+}
+
+.img-4 {
+    background: url("/images/port4.jpg");
+    background-size: cover;
+    transition-duration: 200ms;
 }
