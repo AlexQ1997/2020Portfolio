@@ -9,7 +9,6 @@
 html, body {
     margin: 0;
     padding: 0;
-    overflow-y: hidden;
     overflow-x: hidden;
     cursor: url(/images/cursor.png), auto !important;
 }
@@ -165,4 +164,75 @@ footer nav a:hover {
     background: url("/images/port4.jpg");
     background-size: cover;
     transition-duration: 200ms;
+}
+
+
+/* ------------  About Page  --------------------- */
+.home {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    
+}
+
+.home a {
+    font-family: var(--secondary-font);
+    font-weight: 300;
+    font-size: 24px;
+    color: var(--main-color);
+    text-decoration: none;
+}
+
+.content {
+    width: 100%;
+    margin-left: 10rem;
+    height: 200vh;
+}
+
+.content h4 {
+    font-size: 96px;
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-family: var(--secondary-font);
+    margin-bottom: 0;
+}
+
+.content .aboutMe {
+    font-family: var(--primary-font);
+    font-size: 24px;
+    width: 60%;
+    color: var(--main-color);
+}
+
+.content img {
+    width: 80%;
+    height: 45%;
+}
+
+.content .contactTitle h5 {
+    font-size: 96px;
+    color: var(--secondary-color);
+    font-weight: 800;
+    font-family: var(--secondary-font);
+    margin-bottom: 0;
+    margin-top: 4rem;
+}
+
+.contactTitle .contactText {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.contactTitle .contact p {
+    font-size: 24px;
+    font-family: var(--primary-font);
+    color: var(--main-color);
+    margin: 0;
+}
+
+.contactTitle .contact .info h6 {
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-family: var(--primary-font);
+    margin: 0;
 }

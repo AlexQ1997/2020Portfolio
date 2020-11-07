@@ -85,9 +85,13 @@ gsap.from('footer, nav', {
     delay:1.8, 
     ease: "power1.out" })
 
-    gsap.from('.navigation', {
-        opacity: 0, 
-        duration: 2, 
-        x: 50, 
-        delay: 3.5, 
-        ease: "power1.out" })
+
+
+gsap.from('.aboutimg, img', {
+    duration: 1,
+     opacity:0,
+    repeat: -1,
+    yoyo: true,
+    repeatDelay: 3.5,
+    stagger: 0.5
+     })
