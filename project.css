@@ -5,6 +5,16 @@
     --secondary-font: 'Raleway', sans-serif;
 }
 
+body {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    background: url("/images/grainTexture.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
 
 .home {
     display: flex;
@@ -27,43 +37,108 @@
 }
 
 /* Navigation */
-.projects {
-    width: 100%;
-    position: absolute;
-    top: 10%; 
-    margin-left: 10rem;
+.menu_item {
+    position: relative;
+    padding: 0 6vw;
 }
 
-.projects .projectsList li {
-    list-style: none;
-    margin-bottom: 50px;
-}
-
-.projects .projectsList li a  {
-    text-decoration: none;
-    font-size: 96px;
-    font-family: var(--secondary-font);
+.menu_item-link {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    -webkit-text-stroke: 1.5px #fff;
+    -webkit-text-fill-color: transparent;
     color: transparent;
+    transition: opacity 0.4s;
+}
+
+.menu_item-link::before {
+    all: initial;
+    counter-increment: menu;
+    font-family: 'Raleway', sans-serif;
+    position: absolute;
+    bottom: 60%;
+    pointer-events: none;
+}
+
+.menu_item-link:hover {
+    transition-duration: 0.1s;
+    opacity: 0;
+}
+
+.menu_item-img {
+    pointer-events: none;
+    position: absolute;
+    height: 50vh;
+    opacity: 0;
+    max-height: 400px;
+    left: 100%;
+    top: 50%;
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) translate3d(0, 20px 0);
+}
+
+.menu_item-link:hover + .menu_item-img {
+    opacity: 1;
+    transform: translate3d(calc(-100% - 6vw), -30%, 0) rotate3d(0,0,1, 4deg);
+    transition: all 0.4s;
+}
+
+.menu {
+    padding: 10vh 0 25vh;
+    --offset: 20vw;
+    --move-initial: calc(-25% + var(--offset));
+    --move-final: calc(-50% + var(--offset));
+    font-size: 7vw;
+}
+
+.marquee{
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    color: rgb(7, 219, 0);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+.marquee_inner {
+    width: fit-content;
+    display: flex;
+    position: relative;
+    animation: marquee 5s linear infinite;
+    animation-play-state: paused;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+
+.menu_item-link:hover ~ .marquee .marquee_inner {
+    animation-play-state: running;
+    opacity: 1;
+    transition-duration: 0.4s;
+}
+
+.menu_item-link,
+.marquee span {
+    white-space: nowrap;
+    font-size: 7vw;
+    padding: 0 1vw;
     font-weight: 800;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #fff;
+    line-height: 1.20;
+    text-decoration: none;
 }
 
-.projects .projectsList li a {
-        position: relative;
-        display: inline-block;
-        color: transparent;
-        overflow: hidden;
-        background: linear-gradient(to right, #00CE3A 50%, transparent 50%);
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-size: 200% 100%;
-        background-position: 100%;
-        transition: background-position 275ms ease;
-        text-decoration: none; 
+
+.marquee span {
+    font-style: italic;
 }
 
+@keyframes marquee {
+    0% {
+        transform: translate3d(var(--move-initial),0, 0 );
+    }
+    100% {
+        transform: translate3d(var(--move-final), 0, 0);
+    }
+}
 
   /* ---------- Footer -------- */
 

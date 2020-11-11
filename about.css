@@ -1,4 +1,7 @@
 /* ------------  About Page  --------------------- */
+body {
+    height: 100vh;
+}
 .home {
     display: flex;
     justify-content: center;
