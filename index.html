@@ -14,6 +14,12 @@
 </head>
 
 <body>
+
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>
+    </div>
+
+    <div class="main-content"></div>
     <!-- Navigation  -->
     <!-- <div class="menu">
         <nav class="menu-nav">
@@ -68,6 +74,14 @@
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
         <script src="main.js"></script>
+        <script>
+            let spinnerWrapper = document.querySelector('.spinner-wrapper');
+        
+            window.addEventListener('load', function () {
+                // spinnerWrapper.style.display = 'none';
+                spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+            });
+        </script>
 </body>
 
 </html>

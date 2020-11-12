@@ -75,7 +75,7 @@ gsap.from('.name ', {
     opacity: 0, 
     duration: 2.5, 
     y: -50, 
-    delay:1.4, 
+    delay:6, 
     ease: "power1.out" })
 
 gsap.from('footer, nav', {
