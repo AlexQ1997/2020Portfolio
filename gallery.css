@@ -13,6 +13,9 @@ body {
     height: 100%;
 }
 
+
+
+
 .home {
     display: flex;
     justify-content: center;
@@ -26,6 +29,7 @@ body {
     color: var(--main-color);
     text-decoration: none;
     transition: ease-in-out 1s;
+    z-index: ;
 }
 
 .home a:hover {
