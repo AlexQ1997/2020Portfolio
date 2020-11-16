@@ -213,3 +213,13 @@ footer nav a:hover {
     background-size: cover;
     opacity: 0;
 }
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+    .container {
+        margin: 0 0 0 5rem;
+    }
+    .container .landing-screen .text {
+        width:
+    }
+  }
