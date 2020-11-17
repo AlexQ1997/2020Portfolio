@@ -57,7 +57,7 @@ body {
 .menu {
     width: 100%;
     position: absolute;
-    left: 150%;
+    left: 130%;
     top: 15%;
 }
 
@@ -68,7 +68,7 @@ body {
 
 .menu ul li a {
     text-decoration: none;
-    font-size: 96px;
+    font-size: 7rem;
     font-family: var(--secondary-font);
     color: transparent;
     font-weight: 800;
@@ -105,12 +105,13 @@ body {
 .landing-screen {
     display: flex; 
     position: absolute;
-    top: 15%;
+    top: 10%;
 }
+
 
 /* Heading text */
 .landing-screen .text h1{
-    font-size: 180px;
+    font-size: 10rem;
     margin: 0;
     font-family: var(--secondary-font);
     font-weight: 600;
@@ -124,7 +125,7 @@ body {
     /*-------- Secondary text -----*/
 
 .landing-screen .name p {
-    font-size: 36px;
+    font-size: 1.8rem;
     font-family: var(--primary-font);
     color: var(--main-color);
     margin: 0;
@@ -153,63 +154,46 @@ footer nav a {
     transition: ease-in-out 1s;
 }
 footer nav a:hover {
-    font-size: 2rem;
+    font-size: 1.1rem;
 }
 
-/* Loading page Spinner  */
-.spinner-wrapper{
-    width: 100%;
-    height: 100%;
-    background-color: #080808;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.spinner {
-    position: relative;
-    width: 8rem;
-    height: 8rem;
-    border-radius: 50%;
-}
-
-.spinner::before,
-.spinner:after{
-    content: "";
-    position: absolute;
-    border-radius: 50%;
-}
-
-.spinner:before {
-    width: 100%;
-    height: 100%;
-    background-image:linear-gradient(90deg, #00CE3A 0%,#020a00 100% );
-    animation: spin .5s infinite linear;
-}
-.spinner:after {
-    width: 90%;
-    height: 90%;
-    background-color: #080808;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
+/* Media Querie */
+@media only screen and (max-width: 600px) {
+    body {
+      height: 100vh;
+      width: 100%;
     }
-
-}
-
-.main-content{
-    width: 100%;
-    height: 100vh;
-    background: url("https://source.unsplash.com/random/4000x4000") center no-repeat;
-    background-size: cover;
-    opacity: 0;
-}
+    .container {
+        margin: 0 0 0 2rem;
+    }
+    .landing-screen {
+        
+    }
+    .landing-screen .text .title h1 {
+        font-size: 5rem;
+    }
+    .landing-screen .text .name p {
+        font-size: 1rem;
+    }
+    .menu {
+        left: 0;
+        top: 100%;
+    }
+    .menu .navigation {
+        padding: 0;
+    }
+    .menu .navigation li a  {
+        font-size: 3rem;
+        flex-direction: column;
+        margin: 0;
+    }
+    footer {
+        bottom: 10%;
+    }
+    footer p {
+        font-size: 1rem;
+    }
+    footer nav a {
+        font-size: 0.7rem;
+    }
+  }

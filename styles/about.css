@@ -21,7 +21,7 @@ body {
 
 .home a:hover {
     color: var(--secondary-color);
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 .content {
@@ -79,4 +79,42 @@ body {
     font-size: 24px;
     font-family: var(--primary-font);
     margin: 0;
+}
+
+/* Media Queirries */
+
+@media only screen and (max-width: 600px) {
+    .content {
+        margin-left: 2rem;
+        height: 100vh;
+    }
+    .content h4 {
+        font-size: 5rem;
+        margin-top: 1rem;
+    }
+    .content .aboutMe {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    .content img {
+        height: 25%;
+    }
+
+    /* Contact */
+    
+.content .contactTitle h5 {
+    font-size: 4rem;
+    margin-top: 1rem;
+    }
+.contactTitle .contact p {
+        font-size: .8rem;
+        margin: 0;
+        display: none;
+    }
+    .contactTitle .contact .info h6 {
+        color: var(--secondary-color);
+        font-size: 0.8rem;
+        font-family: var(--primary-font);
+        margin: 0;
+    }
 }
